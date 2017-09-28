@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Scoring;
+﻿using Scoring;
 using TechTalk.SpecFlow;
+using FluentAssertions;
 
 namespace ScoringSpecs.StepFiles
 {
@@ -25,19 +24,19 @@ namespace ScoringSpecs.StepFiles
         [Then(@"the frame score should show ""(.*)""")]
         public void ThenTheFrameScoreShouldShow(string frameScore)
         {
-            Assert.AreEqual(frameScore, _scorer.FrameScore);
+            _scorer.FrameScore.Should().Be(frameScore);
         }                
         
         [Then(@"the total score should be ""(.*)""")]
         public void ThenTheTotalScoreShouldBe(int total)
         {
-            Assert.AreEqual(total, _scorer.Total());
+            _scorer.Total().Should().Be(total);
         }
             
         [Then(@"the total should be (.*)")]
         public void ThenTheTotalShouldBe(int score)
         {
-            Assert.AreEqual(score,_scorer.Total());
+            _scorer.Total().Should().Be(score);
         }        
 
         [When(@"I bowl (.*) strikes in a row")]
@@ -75,26 +74,26 @@ namespace ScoringSpecs.StepFiles
         [Then(@"I should be on frame number (.*)")]
         public void ThenIShouldBeOnFrameNumber(int frameNumber)
         {
-            Assert.AreEqual(frameNumber, _scorer.Frame);
+            _scorer.Frame.Should().Be(frameNumber);
         }
 
         [When(@"A Message shows ""(.*)""")]
         public void WhenAMessageShows(string message)
         {
-            Assert.AreEqual(message,_scorer.Message);
+            _scorer.Message.Should().Be(message);
         }
 
         [Given(@"A Message shows ""(.*)""")]
         public void GivenAMessageShows(string message)
         {
-            Assert.AreEqual(message, _scorer.Message);
+            _scorer.Message.Should().Be(message);
         }
 
 
         [Then(@"A Message shows ""(.*)""")]
         public void ThenAMessageShows(string message)
         {
-            Assert.AreEqual(message, _scorer.Message);
+            _scorer.Message.Should().Be(message);
         }
     }
 }
