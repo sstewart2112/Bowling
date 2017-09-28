@@ -95,7 +95,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-testRunner.When("I bowl a strike", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I bowl 1 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
 testRunner.Then("the frame score should show \"X\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
@@ -143,7 +143,7 @@ testRunner.When("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTa
 #line 23
 testRunner.Then("the frame score should show \"3 4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
- testRunner.And("the total score should be \"7\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be 7", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
  testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -165,7 +165,7 @@ testRunner.When("I bowl 12 strikes in a row", ((string)(null)), ((TechTalk.SpecF
 #line 30
 testRunner.Then("the frame score should show \"X X X\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 31
- testRunner.And("the total score should be \"300\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be 300", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
  testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -189,7 +189,7 @@ testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlo
 #line 38
 testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
-testRunner.Then("the total should be 285", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the total score should be 285", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
  testRunner.And("the frame score should show \"X 5 /\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
@@ -243,7 +243,7 @@ testRunner.When("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTa
 #line 57
 testRunner.Then("the frame score should show \"8 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 58
- testRunner.And("the total should be 43", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be 43", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 59
  testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -269,7 +269,7 @@ testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTa
 #line 66
 testRunner.Then("the frame score should show \"4 5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 67
- testRunner.And("the total should be 262", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be 262", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 68
  testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -297,7 +297,7 @@ testRunner.When("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTa
 #line 76
 testRunner.Then("the frame score should show \"4 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
- testRunner.And("the total should be 74", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be 74", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 78
  testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -327,7 +327,7 @@ testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlo
 #line 87
 testRunner.When("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 88
-testRunner.Then("the total should be 21", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the total score should be 21", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 89
  testRunner.And("the frame score should show \"0 3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 90
@@ -355,7 +355,7 @@ testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlo
 #line 97
 testRunner.When("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
-testRunner.Then("the total should be 267", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the total score should be 267", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 99
  testRunner.And("the frame score should show \"3 / 4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -363,11 +363,11 @@ testRunner.Then("the total should be 267", ((string)(null)), ((TechTalk.SpecFlow
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bowl four strikes in a row and show turkey message on the third one only")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bowl four strikes in a row and show turkey message on the third frame only")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scoring")]
-        public virtual void BowlFourStrikesInARowAndShowTurkeyMessageOnTheThirdOneOnly()
+        public virtual void BowlFourStrikesInARowAndShowTurkeyMessageOnTheThirdFrameOnly()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Bowl four strikes in a row and show turkey message on the third one only", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Bowl four strikes in a row and show turkey message on the third frame only", ((string[])(null)));
 #line 101
 this.ScenarioSetup(scenarioInfo);
 #line 102
