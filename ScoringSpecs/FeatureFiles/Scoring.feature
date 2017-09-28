@@ -11,7 +11,7 @@ Then the frame score should show "X"
 
 Scenario: Bowling a spare
 Given I am on the first frame
-And I bowl a ball knocking down 5 pins
+	And I bowl a ball knocking down 5 pins
 When I bowl a ball knocking down 5 pins
 Then the frame score should show "5 /"
 	And I should be on frame number 2

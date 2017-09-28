@@ -115,7 +115,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
 testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
