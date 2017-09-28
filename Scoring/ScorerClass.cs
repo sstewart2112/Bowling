@@ -10,34 +10,31 @@ namespace Scoring
 {       
     public class ScorerClass
     {
+        private const int MAX_PINS = 10;
         private const int MAX_FRAMES = 10;
         private const int FIRST_FRAME = 1;
+
         private class FrameClass
         {
             private int _firstBallValue;
             private int _secondBallValue;
-            private int _thirdBallValue;
-            private bool _firstBallThrown;
-            private bool _secondBallThrown;
-            private bool _thirdBallThrown;
-            private readonly bool _lastFrame;           
+            private int _thirdBallValue;            
 
             private bool areAllPinsDown(int pinsDown)
             {
-                return (pinsDown == 10);
+                return (pinsDown == MAX_PINS);
             }
 
-            public FrameClass(bool lastFrame)
-            {
-                _lastFrame = lastFrame;
-            }
-            
+            public bool FirstBallThrown { get; private set; }
+            public bool SecondBallThrown { get; private set; }
+            public bool ThirdBallThrown { get; private set; }
+
             public int FirstBallValue => _firstBallValue;
             public int SecondBallValue => _secondBallValue;
 
             public void SetFirstBallValue(int pinsKnockedDown)
             {
-                _firstBallThrown = true;
+                FirstBallThrown = true;
                 _firstBallValue = pinsKnockedDown;
                 IsStrike = areAllPinsDown(pinsKnockedDown);
                 IsSpare = false;
@@ -45,7 +42,7 @@ namespace Scoring
             }
             public void SetSecondBallValue(int pinsKnockedDown)
             {
-                _secondBallThrown = true;
+                SecondBallThrown = true;
                 _secondBallValue = pinsKnockedDown;
                 if (Number < MAX_FRAMES)
                 {
@@ -64,7 +61,7 @@ namespace Scoring
 
             public void SetThirdBallValue(int pinsKnockedDown)
             {
-                _thirdBallThrown = true;
+                ThirdBallThrown = true;
                 _thirdBallValue = pinsKnockedDown;
                 IsSpare = areAllPinsDown(_secondBallValue + pinsKnockedDown);
             }
@@ -72,7 +69,7 @@ namespace Scoring
             public bool IsStrike;
             public bool IsSpare;
 
-            public int Number { private get; set; }                      
+            public int Number { get; set; }                      
 
             public int Total
             {
@@ -90,44 +87,48 @@ namespace Scoring
             {
                 get
                 {
-                    if (_lastFrame)
+                    string sResult = "";
+                    if (FirstBallThrown)
                     {
-                        // The 10th frame can show up to 3 scores based on the number of balls thrown                        
-                        string sResult = "";
-                        if (_firstBallThrown)
-                        {
-                            if (areAllPinsDown(_firstBallValue)) sResult = "X";
-                            else sResult = Convert.ToString(_firstBallValue);
-                        }
-                        if (_secondBallThrown)
-                        {
-                            if (areAllPinsDown(_secondBallValue)) sResult += " X";
-                            else if (areAllPinsDown(_firstBallValue + _secondBallValue)) sResult += " /";
-                            else sResult += " " + Convert.ToString(_secondBallValue);
-                        }
-                        if (_thirdBallThrown)
-                        {
-                            if (IsStrike) sResult += " X";
-                            else if(IsSpare) sResult += " /";
-                            else sResult += " " + Convert.ToString(_thirdBallValue);
-                        }
-
-                        return(sResult);
+                        if (areAllPinsDown(_firstBallValue)) sResult = "X";
+                        else sResult = Convert.ToString(_firstBallValue);
                     }
-                    else
+                    if (SecondBallThrown)
                     {
-                        if (IsStrike) return ("X");
-                        if (IsSpare) return ("/");
-                        if (!_firstBallThrown) return ("");
-                        return Convert.ToString(Total);
+                        if (areAllPinsDown(_secondBallValue)) sResult += " X";
+                        else if (areAllPinsDown(_firstBallValue + _secondBallValue)) sResult += " /";
+                        else sResult += " " + Convert.ToString(_secondBallValue);
+                    }
+                    if (ThirdBallThrown)
+                    {
+                        if (IsStrike) sResult += " X";
+                        else if(IsSpare) sResult += " /";
+                        else sResult += " " + Convert.ToString(_thirdBallValue);
                     }
 
-                    
-                    
+                    return(sResult);
                 }                 
             }            
         }
         private readonly FrameClass[] Frames;
+
+        private bool _isTurkey(int frameNumber)
+        {
+            // frameNumber is indexed at 1 so we have to adjust for that
+            // find the total number of consecutive strikes
+            // and then make sure it's evently divisable by 3
+            var iFrameIndex = frameNumber - 1;            
+            var i = iFrameIndex;
+            var iStrikes = 0;
+            var bConsecutive = true;
+            while (bConsecutive && i>=0)
+            {
+                if (Frames[i].IsStrike) iStrikes++;
+                else bConsecutive = false;
+                i--;
+            }
+            return (iStrikes >= 3 && iStrikes % 3 == 0);
+        }
 
         private void IncrementFrame()
         {
@@ -138,18 +139,18 @@ namespace Scoring
         {
             return frame - 1;
         }        
+
         public ScorerClass()
         {            
             Frames = new FrameClass[MAX_FRAMES];
             for (int i = 0; i < MAX_FRAMES; i++)
             {
-                // i is indexed at zero 
-                // MAX_FRAMES is #of frames indexed at 1
-                Frames[i] = new FrameClass(i+1 == MAX_FRAMES);
+                Frames[i] = new FrameClass();
             }
 
             Frame = 1;
         }
+
         public int Frame { get; set; }
 
         public string FrameScore
@@ -205,27 +206,33 @@ namespace Scoring
             return (iResult);
         }
 
-        public void bowlFirstBall(int pinsDown)
+        public void bowlBall(int pinsDown)
         {
             var frame = Frames[getFrameIndex(Frame)];
             frame.Number = Frame;
-            frame.SetFirstBallValue(pinsDown); 
-            if(frame.IsStrike) IncrementFrame();
+                        
+            if (!frame.FirstBallThrown)
+            {
+                frame.SetFirstBallValue(pinsDown);
+                if(frame.IsStrike) IncrementFrame();
+            }
+            else if (!frame.SecondBallThrown)
+            {
+                frame.SetSecondBallValue(pinsDown);
+                IncrementFrame();
+            }
+            else if (!frame.ThirdBallThrown)
+            {
+                if (frame.Number == MAX_FRAMES)
+                {
+                    frame.SetThirdBallValue(pinsDown);
+                }
+            }
+
+            if (_isTurkey(frame.Number)) Message = "Turkey!";
+            else Message = "";
         }
 
-        public void bowlSecondBall(int pinsDown)
-        {
-            var frame = Frames[getFrameIndex(Frame)];
-            frame.Number = Frame;
-            frame.SetSecondBallValue(pinsDown);
-            IncrementFrame();
-        }
-
-        public void bowlThirdBall(int pinsDown)
-        {
-            var frame = Frames[getFrameIndex(Frame)];
-            frame.Number = Frame;
-            frame.SetThirdBallValue(pinsDown);
-        }
+        public string Message { get; set; }
     }
 }
