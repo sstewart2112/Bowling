@@ -99,7 +99,7 @@ testRunner.When("I bowl a strike", ((string)(null)), ((TechTalk.SpecFlow.Table)(
 #line 9
 testRunner.Then("the frame score should show \"X\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 10
-testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -115,13 +115,13 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
-testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
 testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
 testRunner.Then("the frame score should show \"5 /\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 17
-testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -137,15 +137,15 @@ this.ScenarioSetup(scenarioInfo);
 #line 20
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
-testRunner.When("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
-testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
 testRunner.Then("the frame score should show \"3 4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 24
-testRunner.And("the total score should be \"7\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be \"7\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
-testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -165,9 +165,9 @@ testRunner.When("I bowl 12 strikes in a row", ((string)(null)), ((TechTalk.SpecF
 #line 30
 testRunner.Then("the frame score should show \"X X X\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 31
-testRunner.And("the total score should be \"300\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total score should be \"300\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
-testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -183,17 +183,17 @@ this.ScenarioSetup(scenarioInfo);
 #line 35
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 36
-testRunner.When("I bowl 10 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl 10 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 37
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
 testRunner.Then("the total should be 285", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 40
-testRunner.And("the frame score should show \"X 5 /\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the frame score should show \"X 5 /\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
-testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -211,7 +211,7 @@ testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlo
 #line 45
 testRunner.Then("the frame score should show \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 46
-testRunner.And("I should be on frame number 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -227,25 +227,25 @@ this.ScenarioSetup(scenarioInfo);
 #line 49
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 50
-testRunner.When("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
-testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
-testRunner.And("I bowl a ball knocking down 0 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 0 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 53
-testRunner.And("I bowl a ball knocking down 8 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 8 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
-testRunner.And("I bowl 1 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl 1 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55
-testRunner.And("I bowl a ball knocking down 8 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 8 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
-testRunner.And("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 57
 testRunner.Then("the frame score should show \"8 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 58
-testRunner.And("the total should be 43", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total should be 43", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 59
-testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -261,17 +261,17 @@ this.ScenarioSetup(scenarioInfo);
 #line 62
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 63
-testRunner.When("I bowl 9 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl 9 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
-testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 65
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 66
 testRunner.Then("the frame score should show \"4 5\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 67
-testRunner.And("the total should be 262", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total should be 262", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 68
-testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 10", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -287,19 +287,19 @@ this.ScenarioSetup(scenarioInfo);
 #line 71
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 72
-testRunner.When("I bowl 3 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl 3 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 73
-testRunner.And("A Message shows \"Turkey!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("A Message shows \"Turkey!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 74
-testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
-testRunner.And("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 1 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 76
 testRunner.Then("the frame score should show \"4 1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 77
-testRunner.And("the total should be 74", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the total should be 74", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 78
-testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 5", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -315,23 +315,23 @@ this.ScenarioSetup(scenarioInfo);
 #line 81
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 82
-testRunner.When("I bowl a ball knocking down 2 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl a ball knocking down 2 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
-testRunner.And("I bowl a ball knocking down 6 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 6 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 84
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 85
-testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 5 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 86
-testRunner.And("I bowl a ball knocking down 0 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 0 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 87
-testRunner.And("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 88
 testRunner.Then("the total should be 21", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 89
-testRunner.And("the frame score should show \"0 3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the frame score should show \"0 3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 90
-testRunner.And("I should be on frame number 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I should be on frame number 4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -347,17 +347,17 @@ this.ScenarioSetup(scenarioInfo);
 #line 93
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 94
-testRunner.When("I bowl 9 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl 9 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
-testRunner.And("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 3 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 96
-testRunner.And("I bowl a ball knocking down 7 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I bowl a ball knocking down 7 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 97
-testRunner.And("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl a ball knocking down 4 pins", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 98
 testRunner.Then("the total should be 267", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 99
-testRunner.And("the frame score should show \"3 / 4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the frame score should show \"3 / 4\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -373,11 +373,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 102
 testRunner.Given("I am on the first frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 103
-testRunner.When("I bowl 3 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I bowl 3 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 104
-testRunner.And("A Message shows \"Turkey!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("A Message shows \"Turkey!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 105
-testRunner.And("I bowl 1 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.When("I bowl 1 strikes in a row", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 106
 testRunner.Then("A Message shows \"\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

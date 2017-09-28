@@ -14,7 +14,6 @@ namespace ScoringSpecs.StepFiles
         public void GivenIAmOnTheFirstFrame()
         {
             _scorer = new ScorerClass();
-            Assert.AreEqual(1, _scorer.Frame);
         }
 
         [When(@"I bowl a strike")]
@@ -50,11 +49,28 @@ namespace ScoringSpecs.StepFiles
             }
         }
 
+        [Given(@"I bowl (.*) strikes in a row")]
+        public void GivenIBowlStrikesInARow(int strikes)
+        {
+            for (var i = 1; i <= strikes; i++)
+            {
+                _scorer.bowlBall(10);
+            }
+        }
+
+
         [When(@"I bowl a ball knocking down (.*) pins")]
         public void WhenIBowlABallKnockingDownPins(int pinsDown)
         {
             _scorer.bowlBall(pinsDown);
         }
+
+        [Given(@"I bowl a ball knocking down (.*) pins")]
+        public void GivenIBowlABallKnockingDownPins(int pinsDown)
+        {
+            _scorer.bowlBall(pinsDown);
+        }
+
 
         [Then(@"I should be on frame number (.*)")]
         public void ThenIShouldBeOnFrameNumber(int frameNumber)
@@ -67,6 +83,13 @@ namespace ScoringSpecs.StepFiles
         {
             Assert.AreEqual(message,_scorer.Message);
         }
+
+        [Given(@"A Message shows ""(.*)""")]
+        public void GivenAMessageShows(string message)
+        {
+            Assert.AreEqual(message, _scorer.Message);
+        }
+
 
         [Then(@"A Message shows ""(.*)""")]
         public void ThenAMessageShows(string message)
